@@ -21,7 +21,7 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
-        it('are defined', function() {
+        it('RSS Feeds are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
@@ -66,7 +66,7 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        it(' is hidden by default', function() {
+        it('is hidden by default', function() {
             expect(body.hasClass('menu-hidden')).toBeTruthy();
         });
         /* TODO: Write a test that ensures the menu changes
@@ -74,7 +74,7 @@ $(function() {
          * should have two expectations: does the menu display when
          * clicked and does it hide when clicked again.
          */
-        it(' is show when menu icon is clicked', function() {
+        it('is show when menu icon is clicked', function() {
             menuIcon.click();
             expect(body.hasClass('menu-hidden')).toBeFalsy();
             menuIcon.click();
@@ -102,7 +102,7 @@ $(function() {
             })
 
         });
-        it('is all load with loadFeeds', function(done) {
+        it('initial entries are load with loadFeeds', function(done) {
             entriesLen = $('.feed').children().length;
             expect(entriesLen).not.toBe(0);
             done();
